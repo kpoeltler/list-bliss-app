@@ -1,24 +1,26 @@
-//store todos
-let todos = ['item1', 'items2', 'item3'];
+let todoList = {
+  todos:['item1', 'items2', 'item3'],
 
-//display todos
-function displayTodos(){
-  console.log(`My Todos List ${todos}`);
+  displayTodos: function(){
+    console.log(`My Todos List ${this.todos}`);
+  },
+
+  addTodo: function(todo){
+    this.todos.push(todo);
+    this.displayTodos()
+  },
+
+  changeTodo: function(position, newValue){
+    this.todos[position] = newValue;
+    this.displayTodos();
+  },
+
+  deleteTodo: function(position){
+    this.todos.splice(position, 1);
+    this.displayTodos();
+  }
 }
 
-function addTodo(todo){
-  todos.push(todo);
-  displayTodos()
- }
-
-function changeTodo(position, newValue){
-  todos[position] = newValue;
-  displayTodos();
- }
-
-function deleteTodo(position){
-  todos.splice(position, 1);
-  displayTodos();
- }
-
-console.log(deleteTodo(0));
+console.log(todoList.addTodo('item 4'));
+console.log(todoList.changeTodo(1,'zebra'));
+console.log(todoList.deleteTodo(2));
