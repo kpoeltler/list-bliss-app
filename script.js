@@ -6,8 +6,8 @@ function displayTodos(){
   console.log(`My Todos List ${todos}`);
 }
 
-function addTodo(){
-  todos.push('new todo');
+function addTodo(todo){
+  todos.push(todo);
   displayTodos()
  }
 
@@ -19,4 +19,4 @@ function addTodo(){
 
 // }
 
-console.log(addTodo());
+console.log(addTodo('item 4'));
