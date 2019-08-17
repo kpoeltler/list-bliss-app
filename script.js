@@ -5,8 +5,11 @@ let todoList = {
     console.log(`My Todos List ${this.todos}`);
   },
 
-  addTodo: function(todo){
-    this.todos.push(todo);
+  addTodo: function(todoText){
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
     this.displayTodos()
   },
 
@@ -21,6 +24,5 @@ let todoList = {
   }
 }
 
-console.log(todoList.addTodo('item 4'));
-console.log(todoList.changeTodo(1,'zebra'));
-console.log(todoList.deleteTodo(2));
+console.log(todoList.addTodo('item 7'));
+
