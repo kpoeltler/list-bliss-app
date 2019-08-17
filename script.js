@@ -26,8 +26,5 @@ let todoList = {
 
 }
 
-console.log(todoList.addTodo('todo 1'));
-console.log(todoList.addTodo('todo 2'));
-console.log(todoList.changeTodo(1, 'todo changed'));
 
 
