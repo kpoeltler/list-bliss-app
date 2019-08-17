@@ -30,12 +30,26 @@ let todoList = {
     todo.completed = !todo.completed;
     this.displayTodos();
   }
+};
+
+const handlers = {
+  displayTodos: function(){
+    todoList.displayTodos();
+    //view.displayTodos();
+  },
+  addTodo: function(){
+    let addTodoTextInput = document.getElementById('addTodoText');
+    todoList.addTodo(addTodoTextInput.value);
+    addTodoTextInput.value = '';
+  }
 }
 
-console.log(todoList.addTodo('item 1'));
-console.log(todoList.addTodo('item 2'));
-console.log(todoList.toggleCompleted(0));
 
+// const view = {
+//   displayTodos: function(){
+
+//   }
+// }
 
 
 
