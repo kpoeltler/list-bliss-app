@@ -6,7 +6,8 @@
   </head>
   <body>
 <h1>My Todos</h1>
-<div>
+<section class="column1of2">
+  <div>
   <input id="addTodoText" placeholder="What needs to be done?" type="text"/>
   <button onclick="handlers.addTodo()">Add a todo</button>
 </div>
@@ -16,12 +17,13 @@
     <button onclick="handlers.changeTodo()">Change a todo</button>
   </div>
   <div>
-      <input id="toggleTodoCompleted" type="number"/>
+      <input id="toggleTodoCompleted" type="number" placeholder="Enter 0 - 100"/>
       <button onclick="handlers.toggleCompleted()">Mark a todo completed</button>
-    </div>
-    <section>
-      <ul></ul>
-   </section>
+  </div>
+</section>
+<section class="column2of2">
+   <ul></ul>
+</section>
 
     <script src="script.js"></script>
   </body>

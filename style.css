@@ -1,4 +1,18 @@
+body{
+  width:100%;
+  height:100%;
+  color: navy;
+}
+
 body h1{
   font: 46px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
+  margin-left: 40%;
+  margin-right: 30%;
+
+}
+.column1of2, .column2of2{
+  width: 38%;
+  margin-left: auto;
+  margin-right: auto;
 }

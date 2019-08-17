@@ -5,7 +5,7 @@ let todoList = {
 
     for(let i = 0; i < this.todos.length; i++){
       if (this.todos[i].completed === true){
-        console.log(`( X ), ${this.todos[i].todoText}`);
+        console.log(`( x ), ${this.todos[i].todoText}`);
       } else {
         console.log(`(  ), ${this.todos[i].todoText}`);
       }
@@ -50,11 +50,11 @@ const handlers = {
     todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText.value);
     changeTodoText.value = '';
     changeTodoPosition.value = '';
-    view.displayTodos();
+    view.displayTodos()
   },
   toggleCompleted: function() {
     let toggleTodoCompleted = document.getElementById('toggleTodoCompleted');
-    todoList.toggleCompleted(toggleTodoCompleted.value);
+    todoList.toggleCompleted(toggleTodoCompleted.valueAsNumber);
     view.displayTodos();
   }
 };
