@@ -50,6 +50,11 @@ const handlers = {
     todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText.value);
     changeTodoText.value = "";
     changeTodoPosition.value = "";
+  },
+  toggleCompleted: function() {
+    let toggleTodoCompleted = document.getElementById('toggleTodoCompleted');
+    todoList.toggleCompleted(toggleTodoCompleted.value);
+    view.displayTodos();
   }
 };
 
@@ -86,7 +91,7 @@ const view = {
 
     //Check if elementClicked is a delete button.
     if (elementClicked.className === 'deleteBtn'){
-      handlers.deleteTodo(parseInt(elementClicked.parentNode.id)); 
+      handlers.deleteTodos(parseInt(elementClicked.parentNode.id)); 
       }
     });
   }
