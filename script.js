@@ -11,12 +11,13 @@ function addTodo(todo){
   displayTodos()
  }
 
-// function changeTodo(){
-
-// }
+function changeTodo(position, newValue){
+  todos[position] = newValue;
+  displayTodos();
+ }
 
 // function deleteTodo(){
 
 // }
 
-console.log(addTodo('item 4'));
+console.log(changeTodo(0, 'changed value'));
