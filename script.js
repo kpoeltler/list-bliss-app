@@ -16,8 +16,9 @@ function changeTodo(position, newValue){
   displayTodos();
  }
 
-// function deleteTodo(){
+function deleteTodo(position){
+  todos.splice(position, 1);
+  displayTodos();
+ }
 
-// }
-
-console.log(changeTodo(0, 'changed value'));
+console.log(deleteTodo(0));
