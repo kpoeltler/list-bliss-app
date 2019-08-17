@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>My Todos</title>
+  </head>
   <body>
 <h1>My Todos</h1>
-
+<div>
+  <input id="addTodoText" placeholder="What needs to be done?" />
+  <button onclick="">Add a todo</button>
+</div>
+<div>
+    <input id="changeTodoText" placeholder="What todo needs to change?" />
+    <input id="changeTodoPosition" placeholder="Choose position" type="number"/>
+    <button onclick="">Change a todo</button>
+  </div>
+  <div>
+      <input id="toggleTodoCompleted" type="number"/>
+      <button onclick="">Mark a todo completed</button>
+    </div>
 
 
     <script src="script.js"></script>
