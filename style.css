@@ -1,42 +1,39 @@
 body{
-  width:100%;
-  height:100%;
+  width:960px;
+  height:1160px;
   color: navy;
   font-size: 16px;
   background-color: lavenderblush;
+  margin-left: 90px;
 }
 
-body h1{
+ h1{
   font: 46px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  margin-left: 42%;
-  margin-right: 30%;
-
-}
-.column1of2, .column2of2{
-  width: 45%;
-  height: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50px;;
+  margin-right: 50%;
+  margin-top: 6%;
 }
 
 input{
   padding-left: 15px;
   height: 30px;
   width: 200px;
-  border-bottom-color: blueviolet;
+  border-bottom-color: rgb(38, 3, 71);
 }
 
+div{
+  width:100%;
+  padding-left: 120px;
+}
 button {
-  margin-left: 5%;
+  margin-left: 3px;
+  padding: 8px;
+  background-color: rgb(213, 213, 253);
+  
 }
-.addBtn{
-  margin-left: 40%;
-}
-.completeBtn{
-  margin-left: 40%;
-}
-
-.todo_card{
+section, .todo_card{
+  width: 100%;
+  margin-top: 30px;
   background-color: lavender;
 }
