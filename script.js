@@ -41,8 +41,15 @@ const handlers = {
     let addTodoTextInput = document.getElementById('addTodoText');
     todoList.addTodo(addTodoTextInput.value);
     addTodoTextInput.value = '';
+  },
+  changeTodo: function(){
+    let changeTodoPosition = document.getElementById('changeTodoPosition');
+    let changeTodoText = document.getElementById('changeTodoText');
+    todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText,);
+    changeTodoText.value = "";
+    changeTodoPosition.value = "";
   }
-}
+};
 
 
 // const view = {
