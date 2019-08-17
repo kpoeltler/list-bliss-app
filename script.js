@@ -1,7 +1,14 @@
 let todoList = {
   todos:[],
   displayTodos: function(){
-    console.log(`My Todos List ${this.todos}`);
+    console.log(`My Todos List:`);
+    for(let i = 0; i < this.todos.length; i++){
+      if (this.todos[i].completed === true){
+        console.log(`( X ), ${this.todos[i].todoText}`);
+      } else {
+        console.log(`(  ), ${this.todos[i].todoText}`);
+      }
+    } 
   },
   addTodo: function(todoText){
     this.todos.push({
@@ -23,8 +30,12 @@ let todoList = {
     todo.completed = !todo.completed;
     this.displayTodos();
   }
-
 }
+
+console.log(todoList.addTodo('item 1'));
+console.log(todoList.addTodo('item 2'));
+console.log(todoList.toggleCompleted(0));
+
 
 
 
