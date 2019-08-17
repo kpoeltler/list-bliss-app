@@ -35,12 +35,13 @@ let todoList = {
 const handlers = {
   displayTodos: function(){
     todoList.displayTodos();
-    //view.displayTodos();
+    view.displayTodos();
   },
   addTodo: function(){
     let addTodoTextInput = document.getElementById('addTodoText');
     todoList.addTodo(addTodoTextInput.value);
     addTodoTextInput.value = '';
+    view.displayTodos();
   },
   changeTodo: function(){
     let changeTodoPosition = document.getElementById('changeTodoPosition');
@@ -51,12 +52,26 @@ const handlers = {
   }
 };
 
+const view = {
+  displayTodos: function(){
+      let todoUl = document.querySelector('ul');
+      todoUl.innerHTML = '';
+      todoList.todos.forEach(function(todo,position){
+      if(todo.completed === true){
+        todoComplete = '( x ) ' + todo.todoText;
+      } else {
+        todoComplete = '(  ) ' + todo.todoText;
+      }
+      todoLi.id = position; 
+      todoLi.textContent = todoComplete;
+      todoLi.appendChild(this.createDeleteBtn());
+      todosUl.appendChild(todoLi);
+    }, this)
+  },
+};
 
-// const view = {
-//   displayTodos: function(){
+view.displayTodos();
 
-//   }
-// }
 
 
 
