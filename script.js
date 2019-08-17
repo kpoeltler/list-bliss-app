@@ -1,5 +1,5 @@
 let todoList = {
-  todos:['item1', 'items2', 'item3'],
+  todos:[],
 
   displayTodos: function(){
     console.log(`My Todos List ${this.todos}`);
@@ -24,5 +24,8 @@ let todoList = {
   }
 }
 
-console.log(todoList.addTodo('item 7'));
+console.log(todoList.addTodo('todo 1'));
+console.log(todoList.addTodo('todo 2'));
+console.log(todoList.changeTodo(1, 'todo changed'));
+
 
