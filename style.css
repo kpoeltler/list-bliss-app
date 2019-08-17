@@ -7,10 +7,10 @@ body{
   margin-left: 90px;
 }
 
- h1{
+ header h1{
   font: 46px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
-  margin-left: 50px;;
+  margin-left: 400px;;
   margin-right: 50%;
   margin-top: 6%;
 }
@@ -24,7 +24,7 @@ input{
 
 div{
   width:100%;
-  padding-left: 120px;
+  padding-left: 20px;
 }
 button {
   margin-left: 3px;
@@ -33,7 +33,14 @@ button {
   
 }
 section, .todo_card{
-  width: 100%;
+  width: 60%;
   margin-top: 30px;
+  margin-left: 150px;
   background-color: lavender;
+}
+
+aside{
+  margin-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

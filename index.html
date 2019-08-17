@@ -7,9 +7,11 @@
 </head>
 
 <body>
+  <header>
   <h1>todos</h1>
+</header>
   <section class="todo_card">
-    <section>
+    <aside>
       <div>
         <input id="addTodoText" placeholder="What needs to be done?" type="text" />
         <button class="addBtn" onclick="handlers.addTodo()">Add a todo</button>
@@ -25,7 +27,7 @@
         <input id="toggleTodoCompleted" type="number" placeholder="Enter 0 - 100" />
         <button class="completeBtn " onclick="handlers.toggleCompleted()">Mark a todo completed</button>
       </div>
-    </section>
+    </aside>
   </section>
   <section>
     <ul></ul>
