@@ -8,20 +8,20 @@
 <h1>My Todos</h1>
 <div>
   <input id="addTodoText" placeholder="What needs to be done?" type="text"/>
-  <button onclick="">Add a todo</button>
+  <button onclick="handlers.addTodo()">Add a todo</button>
 </div>
 <div>
     <input id="changeTodoText" placeholder="What todo needs to change?" />
     <input id="changeTodoPosition" placeholder="Choose position" type="number"/>
-    <button onclick="">Change a todo</button>
+    <button onclick="handlers.changeTodo()">Change a todo</button>
   </div>
   <div>
       <input id="toggleTodoCompleted" type="number"/>
-      <button onclick="">Mark a todo completed</button>
+      <button onclick="handlers.toggleTodo()">Mark a todo completed</button>
     </div>
-    <section>
+    
       <ul></ul>
-    </section>
+   
 
     <script src="script.js"></script>
   </body>

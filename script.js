@@ -2,6 +2,7 @@ let todoList = {
   todos:[],
   displayTodos: function(){
     console.log(`My Todos List:`);
+
     for(let i = 0; i < this.todos.length; i++){
       if (this.todos[i].completed === true){
         console.log(`( X ), ${this.todos[i].todoText}`);
@@ -15,7 +16,7 @@ let todoList = {
       todoText: todoText,
       completed: false
     });
-    this.displayTodos()
+    view.displayTodos();
   },
   changeTodo: function(position, todoText){
     this.todos[position].todoText = todoText;
@@ -38,15 +39,15 @@ const handlers = {
     view.displayTodos();
   },
   addTodo: function(){
-    let addTodoTextInput = document.getElementById('addTodoText');
-    todoList.addTodo(addTodoTextInput.value);
-    addTodoTextInput.value = '';
+    let addTodoText = document.getElementById('addTodoText');
+    todoList.addTodo(addTodoText.value);
+    addTodoText.value = '';
     view.displayTodos();
   },
   changeTodo: function(){
     let changeTodoPosition = document.getElementById('changeTodoPosition');
     let changeTodoText = document.getElementById('changeTodoText');
-    todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText.value,);
+    todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText.value);
     changeTodoText.value = "";
     changeTodoPosition.value = "";
   }
@@ -55,20 +56,20 @@ const handlers = {
 const view = {
   displayTodos: function(){
       let todoUl = document.querySelector('ul');
-      todoUl= "";
-      todoList.todos.forEach(function(todo,position){
+      todoUl.innerHTML= "";
+      todoList.todos.forEach(function(todo, position){
         let todoLi = document.createElement('li');
         let todoComplete = '';
-      if(todo.completed === true){
-        todoComplete = '( x ) ' + todo.todoText;
-      } else {
-        todoComplete = '(  ) ' + todo.todoText;
-      }
+        if(todo.completed === true){
+          todoComplete = '( x ) ' + todo.todoText;
+        } else {
+          todoComplete = '(  ) ' + todo.todoText;
+        }
       todoLi.id = position; 
       todoLi.textContent = todoComplete;
       todoLi.appendChild(this.createDeleteBtn());
       todoUl.appendChild(todoLi);
-    }, this)
+    },this)
   },
   createDeleteBtn: function(){
     var deleteBtn = document.createElement('button');
@@ -76,9 +77,21 @@ const view = {
     deleteBtn.className = 'deleteBtn'
     return deleteBtn;
   },
-};
+  setupEventListener: function(){
+    let todosUl = document.querySelector('ul');
+    todosUl.addEventListener('click', function(event){
+    
+    //Get the element that I clicked.
+    var elementClicked = event.target;
 
-view.displayTodos();
+    //Check if elementClicked is a delete button.
+    if (elementClicked.className === 'deleteBtn'){
+      handlers.deleteTodo(parseInt(elementClicked.parentNode.id)); 
+      }
+    });
+  }
+};
+view.setupEventListener();
 
 
 
