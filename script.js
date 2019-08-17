@@ -55,8 +55,10 @@ const handlers = {
 const view = {
   displayTodos: function(){
       let todoUl = document.querySelector('ul');
-      todoUl.innerHTML = '';
+      todoUl= "";
       todoList.todos.forEach(function(todo,position){
+        let todoLi = document.createElement('li');
+        let todoComplete = '';
       if(todo.completed === true){
         todoComplete = '( x ) ' + todo.todoText;
       } else {
@@ -65,8 +67,14 @@ const view = {
       todoLi.id = position; 
       todoLi.textContent = todoComplete;
       todoLi.appendChild(this.createDeleteBtn());
-      todosUl.appendChild(todoLi);
+      todoUl.appendChild(todoLi);
     }, this)
+  },
+  createDeleteBtn: function(){
+    var deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.className = 'deleteBtn'
+    return deleteBtn;
   },
 };
 
