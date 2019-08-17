@@ -1,10 +1,8 @@
 let todoList = {
-  todos:['item1', 'items2', 'item3'],
-
+  todos:[],
   displayTodos: function(){
     console.log(`My Todos List ${this.todos}`);
   },
-
   addTodo: function(todoText){
     this.todos.push({
       todoText: todoText,
@@ -12,17 +10,21 @@ let todoList = {
     });
     this.displayTodos()
   },
-
-  changeTodo: function(position, newValue){
-    this.todos[position] = newValue;
+  changeTodo: function(position, todoText){
+    this.todos[position].todoText = todoText;
     this.displayTodos();
   },
-
   deleteTodo: function(position){
     this.todos.splice(position, 1);
     this.displayTodos();
+  },
+  toggleCompleted: function(position){
+    let todo = this.todos[position];
+    todo.completed = !todo.completed;
+    this.displayTodos();
   }
+
 }
 
-console.log(todoList.addTodo('item 7'));
+
 
