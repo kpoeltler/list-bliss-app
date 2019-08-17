@@ -5,26 +5,28 @@
     <title>My Todos</title>
   </head>
   <body>
-<h1>My Todos</h1>
+<h1>todos</h1>
+<section class="todo_card">
 <section class="column1of2">
-  <div>
+  <div >
   <input id="addTodoText" placeholder="What needs to be done?" type="text"/>
-  <button onclick="handlers.addTodo()">Add a todo</button>
+  <button class="addBtn" onclick="handlers.addTodo()">Add a todo</button>
 </div>
-<div>
+<div >
     <input id="changeTodoText" placeholder="What todo needs to change?" />
     <input id="changeTodoPosition" placeholder="Choose position" type="number"/>
-    <button onclick="handlers.changeTodo()">Change a todo</button>
+    <button class="editBtn" onclick="handlers.changeTodo()">Change a todo</button>
   </div>
   <div>
       <input id="toggleTodoCompleted" type="number" placeholder="Enter 0 - 100"/>
-      <button onclick="handlers.toggleCompleted()">Mark a todo completed</button>
+      <button class="completeBtn "onclick="handlers.toggleCompleted()">Mark a todo completed</button>
   </div>
+</section>
+
 </section>
 <section class="column2of2">
    <ul></ul>
 </section>
-
     <script src="script.js"></script>
   </body>
 </html>
