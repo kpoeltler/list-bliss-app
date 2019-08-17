@@ -39,7 +39,7 @@ const handlers = {
   },
   addTodo: function(){
     let addTodoTextInput = document.getElementById('addTodoText');
-    todoList.addTodo(addTodoInput.value);
+    todoList.addTodo(addTodoTextInput.value);
     addTodoTextInput.value = '';
   }
 }
