@@ -3,12 +3,12 @@ let todos = ['item1', 'items2', 'item3'];
 
 //display todos
 function displayTodos(){
-  console.log(`My Todos List ${todos.slice(0, 2).join(', ')} and ${todos[2]}.`);
+  console.log(`My Todos List ${todos.slice(0, 2).join(', ')}, ${todos[2]}, and  ${todos[3]}`);
 }
 
-// function addTodo(){
-
-// }
+function addTodo(){
+  todos.push('new todo');
+ }
 
 // function changeTodo(){
 
@@ -18,4 +18,4 @@ function displayTodos(){
 
 // }
 
-console.log(displayTodos());
+console.log(displayTodos(addTodo()));
