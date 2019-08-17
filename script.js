@@ -45,7 +45,7 @@ const handlers = {
   changeTodo: function(){
     let changeTodoPosition = document.getElementById('changeTodoPosition');
     let changeTodoText = document.getElementById('changeTodoText');
-    todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText,);
+    todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText.value,);
     changeTodoText.value = "";
     changeTodoPosition.value = "";
   }
