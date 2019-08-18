@@ -1,46 +1,22 @@
 body{
-  width:960px;
-  height:1160px;
-  color: navy;
-  font-size: 16px;
-  background-color: lavenderblush;
-  margin-left: 90px;
+  margin-top: 5%;
+  min-width: 960px;
+  min-height: 1000px;
 }
 
- header h1{
-  font: 46px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  margin-left: 400px;;
-  margin-right: 50%;
-  margin-top: 6%;
+section.todo_card, header{
+  margin-left: 2%;
+  font-size: 1em;
 }
 
-input{
-  padding-left: 15px;
-  height: 30px;
-  width: 200px;
-  border-bottom-color: rgb(38, 3, 71);
+header{
+font-size: 4em;
 }
-
-div{
-  width:100%;
-  padding-left: 20px;
+input, button{
+  transform: scale(1.5);
+  margin:70px;
 }
-button {
-  margin-left: 3px;
-  padding: 8px;
-  background-color: rgb(213, 213, 253);
-  
-}
-section, .todo_card{
-  width: 90%;
-  margin-top: 30px;
-  margin-left: 105px;
-  background-color: lavender;
-}
-
-aside{
-  margin-left: 70px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.add>button, .toggle>button{
+  float:right;
+  margin-right: 100px;
 }
