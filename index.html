@@ -11,25 +11,25 @@
   <h1>todos</h1>
 </header>
   <section class="todo_card">
-    <aside>
-      <div>
+    
+      <div class="add">
         <input id="addTodoText" placeholder="What needs to be done?" type="text" />
         <button class="addBtn" onclick="handlers.addTodo()">Add a todo</button>
       </div>
     </br>
-      <div>
+      <div class="change">
         <input id="changeTodoText" placeholder="What todo needs to change?" />
         <input id="changeTodoPosition" placeholder="Enter todo's position, 0 - 100" type="number" />
         <button class="editBtn" onclick="handlers.changeTodo()">Change a todo</button>
       </div>
       <br>
-      <div>
+      <div class="toggle">
         <input id="toggleTodoCompleted" type="number" placeholder="Enter 0 - 100" />
         <button class="completeBtn " onclick="handlers.toggleCompleted()">Mark a todo completed</button>
       </div>
-    </aside>
+    
   </section>
-  <section>
+  <section class="list">
     <ul></ul>
   </section>
   <script src="script.js"></script>
