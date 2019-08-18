@@ -1,27 +1,36 @@
 body{
+  background-color: rgb(240, 238, 238);
   margin-top: 5%;
-  min-width: 960px;
+  min-width: 800pxpx;
   min-height: 1000px;
   font-family: 'Fredericka the Great', cursive;
   color: rgb(5, 197, 204);
 
 }
+section.todo_card{
+  height:1300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 
 section.todo_card, header{
-  margin-left: 2%;
+  width: 845px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
   font-size: 1em;
 }
 
 header {
   background: linear-gradient(35deg, #ffcccc, #ccffff);
-  padding: 80px;
+  padding: 47px 50px 0px 90px;;
 font-size: 4em;
 
 }
 input, button{
-  margin-left: 50px;
+  margin-left:30px;
   transform: scale(1.5);
-  margin:50px;
+  margin:30px 50px;
 }
 .add>button, .toggle>button, .change>button{
   float:right;
