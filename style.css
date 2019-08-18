@@ -2,6 +2,9 @@ body{
   margin-top: 5%;
   min-width: 960px;
   min-height: 1000px;
+  font-family: 'Fredericka the Great', cursive;
+  color: rgb(5, 197, 204);
+
 }
 
 section.todo_card, header{
@@ -16,10 +19,33 @@ font-size: 4em;
 
 }
 input, button{
+  margin-left: 50px;
   transform: scale(1.5);
-  margin:70px;
+  margin:50px;
 }
-.add>button, .toggle>button{
+.add>button, .toggle>button, .change>button{
   float:right;
   margin-right: 100px;
+}
+ 
+
+button {
+  border-radius: 5px;
+  color: rgb(136, 136, 138);
+  background-color:#ffcccc;
+  padding: 5px 10px 8px 10px;
+}
+
+button:hover {
+  animation-name: background-color;
+  animation-duration: 500ms;
+}
+@keyframes background-color {
+  100% {
+    background-color: #4791d0;
+  }
+}
+.list{
+  margin-left: 70px;
+  margin-top: 3px;
 }
