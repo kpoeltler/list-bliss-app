@@ -1,6 +1,5 @@
 body{
-  background-color: rgb(240, 238, 238);
-  margin-top: 5%;
+  background-color: rgb(199, 243, 245);
   min-width: 800pxpx;
   min-height: 1000px;
   font-family: 'Fredericka the Great', cursive;
@@ -10,6 +9,7 @@ body{
 section.todo_card{
   height:1300px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color: rgb(226, 248, 247);
 }
 
 section.todo_card, header{
@@ -17,14 +17,16 @@ section.todo_card, header{
   margin: auto;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 8px;
+  padding: 50px 10px 10px 30px;
   font-size: 1em;
 }
 
-header {
+header>h1 {
   background: linear-gradient(35deg, #ffcccc, #ccffff);
-  padding: 47px 50px 0px 90px;;
-font-size: 4em;
+  padding: 90px;
+font-size: 5em;
+margin-bottom: 90px;
+margin-top: 0px;
 
 }
 input, button{
