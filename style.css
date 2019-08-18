@@ -9,8 +9,11 @@ section.todo_card, header{
   font-size: 1em;
 }
 
-header{
+header {
+  background: linear-gradient(35deg, #ffcccc, #ccffff);
+  padding: 80px;
 font-size: 4em;
+
 }
 input, button{
   transform: scale(1.5);
