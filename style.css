@@ -23,10 +23,9 @@ section.todo_card, header{
 
 header>h1 {
   background: linear-gradient(35deg, #ffcccc, #ccffff);
-  padding: 90px;
-font-size: 08em;
-margin-bottom: 2em;
-margin-top: 0px;
+  font-size: 08em;
+  margin-bottom: 2em;
+  margin-top: 0px;
 
 }
 input, button{
