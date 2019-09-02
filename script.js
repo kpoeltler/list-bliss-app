@@ -1,3 +1,5 @@
+// add the current date: Date.now(),
+
 let todoList = {
   todos:[],
   displayTodos: function(){
