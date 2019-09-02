@@ -9,12 +9,14 @@ let todoList = {
         console.log(`(  ), ${this.todos[i].todoText}`);
       }
     } 
+    
   },
   addTodo: function(todoText){
     this.todos.push({
       todoText: todoText,
       completed: false 
     });
+    localStorage.setItem('myTodoList', JSON.stringify(todoList.todos));
     view.displayTodos();
   },
   changeTodo: function(position, todoText){
@@ -82,11 +84,10 @@ const view = {
     deleteBtn.className = 'deleteBtn'
     return deleteBtn;
   },
-  
   setupEventListener: function(){
     let todosUl = document.querySelector('ul');
     todosUl.addEventListener('click', function(event){
-    
+      
     //Get the element that I clicked.
     var elementClicked = event.target;
 
@@ -95,7 +96,9 @@ const view = {
       handlers.deleteTodos(parseInt(elementClicked.parentNode.id)); 
       }
     });
-  }
+    
+  },
+  
 };
 view.setupEventListener();
 
