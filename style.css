@@ -1,12 +1,67 @@
+* {
+  text-align: center;
+}
+.clearfix {
+  zoom: 1;
+}
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 960px;
+}
 body{
   background-color: rgb(199, 243, 245);
-  min-width: 800pxpx;
-  min-height: 100px;
+  min-width: 960px;
   font-family: 'Fredericka the Great', cursive;
   color: rgb(5, 197, 204);
 
 }
-section.todo_card{
+article, footer {
+  padding: 10px 10px 5px 20px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header {
+  margin-bottom: 70px;
+  padding: 20px 30px;
+}
+header h1 {
+  background: linear-gradient(35deg, #f67d7d, #ccffff);
+  text-align: center;
+  transform: scale(3.5);
+  padding: 20px 30px;
+  
+}
+
+input, button{
+  margin-left: 30px;
+  transform: scale(1.5);
+}
+button {
+  margin-left: 10px;
+  background: linear-gradient(45deg, #f67d7d, #cccfff);
+}
+
+
+/* section.todo_card{
   height:800px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   background-color: rgb(226, 248, 247);
@@ -22,17 +77,13 @@ section.todo_card, header{
 }
 
 header>h1 {
-  background: linear-gradient(35deg, #ffcccc, #ccffff);
+  
   font-size: 08em;
   margin-bottom: 2em;
   margin-top: 0px;
 
 }
-input, button{
-  margin-left:30px;
-  transform: scale(1.5);
-  margin:3em 5em;
-}
+
 .add>button, .toggle>button, .change>button{
   float:right;
   margin-right: 100px;
@@ -77,4 +128,4 @@ header {
 }
 .sidebar {
   grid-area: sd;
-}
+} */
