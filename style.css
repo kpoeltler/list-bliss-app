@@ -39,6 +39,10 @@ article, footer {
   margin-right: 10px;
 }
 
+.list li{
+  margin: 50px;
+}
+
 header {
   margin-bottom: 70px;
   padding: 20px 30px;
