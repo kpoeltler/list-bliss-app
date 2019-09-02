@@ -2,7 +2,6 @@ let todoList = {
   todos:[],
   displayTodos: function(){
     console.log(`My Todos List:`);
-
     for(let i = 0; i < this.todos.length; i++){
       if (this.todos[i].completed === true){
         console.log(`( x ), ${this.todos[i].todoText}`);
@@ -14,7 +13,7 @@ let todoList = {
   addTodo: function(todoText){
     this.todos.push({
       todoText: todoText,
-      completed: false
+      completed: false 
     });
     view.displayTodos();
   },
@@ -83,6 +82,7 @@ const view = {
     deleteBtn.className = 'deleteBtn'
     return deleteBtn;
   },
+  
   setupEventListener: function(){
     let todosUl = document.querySelector('ul');
     todosUl.addEventListener('click', function(event){
