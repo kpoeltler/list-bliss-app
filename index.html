@@ -14,33 +14,44 @@
 </head>
 
 <body>
- 
-  <header>
-  <h1>list of commitments</h1>
-</header>
- <section class="todo_card content">
-      <nav class="add">
-        <input id="addTodoText" placeholder="Create" type="text" />
-        <button class="addBtn" onclick="handlers.addTodo()">Create</button>
-      </nav>
-    </br>
-      <div class="change content">
-        <input id="changeTodoText" placeholder="Edit" />
-        <input id="changeTodoPosition" placeholder="Enter todo's position, 0 - 100" type="number" />
-        <button class="editBtn" onclick="handlers.changeTodo()">Edit </button>
-      </div>
-    </br>
-      <div class="toggle content">
-        <input id="toggleTodoCompleted" type="number" placeholder="Enter 0 - 100" />
-        <button class="completeBtn" onclick="handlers.toggleCompleted()">Mark complete</button>
-      </div>
-    
+    <div class="wrapper">
+      <section class="input">
+        <header class="showcase">
+          <h1>Todo List</h1>
+          <h2>Create, Edit, or Mark Complete</h2>
+        </header>
+        <div class="input-box input-box-add">
+          <h4>Create a todo</h4>
+          <input id="addTodoText" placeholder="Create a todo" />
+          <button class="btn" onclick="handlers.addTodo()">Create</button>
+        </div>
+        <div class="input-box input-box-edit">
+          <h4>Edit a todo</h4>
+          <input id="changeTodoText" placeholder="Edit a todo" type='text'>
+          <input id="changeTodoPosition" type="number" placeholder="Enter  0-100">
+          <button class="btn" onclick="handlers.changeTodo()"> Edit</button>
+        </div>
+        <div class="input-box input-box-mark">
+          <h4>Mark todo as complete</h4>
+          <input id="toggleTodoCompleted" type="number" placeholder="Enter 0-100">
+          <button class="btn" onclick="handlers.toggleCompleted()">Completed</button>
+        </div>
+      </section>
   
-  <section class="list">
-    <ul></ul>
-  </section>
-</section>
-  <script src="script.js"></script>
-</body>
-
-</html>
+      <!-- <button onclick="handlers.displayTodos()">Display Todos</button> -->
+  
+      <!-- List Display Section -->
+      <section class="info">
+        <h3>Your list of todos</h3>
+        <ul>
+        </ul>
+      </section>
+      <!-- Footer -->
+      <footer>
+        <p>Poeltler Pride &copy 2019 </p>
+      </footer>
+    </div>
+    <!-- Ends wrapper -->
+  </body>
+  
+  </html>

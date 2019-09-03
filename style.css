@@ -1,80 +1,204 @@
-body{
-  background-color: rgb(199, 243, 245);
-  min-width: 800pxpx;
-  min-height: 100px;
+/* CSS Variables */
+:root {
+  --primary: #ffc8cb;
+  --dark: #036a61;
+  --dark-1: #64283e;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(62, 233, 223, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+}
+
+body {
+  background: #cfecf8;
+  margin: 30px 50px;
+}
+
+.btn {
+  background: var(--dark-1);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration:  none;
+  border: 0;
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+/* Finished Core Styles */
+/* Now Working on Each Section */
+
+/* Top container */
+.input {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+    "showcase"
+    "input-box-add"
+    "input-box-edit"
+    "input-box-mark";
+}
+
+/* Showcase */
+.showcase {
+  grid-area: showcase;
+  min-height: 300px;
+  background: url(background-blur.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.showcase h1 {
   font-family: 'Fredericka the Great', cursive;
-  color: rgb(5, 197, 204);
-
-}
-section.todo_card{
-  height:800px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  background-color: rgb(226, 248, 247);
+  font-size: 6rem;
+  margin-bottom: 0;
+  color: var(--dark-1);
 }
 
-section.todo_card, header{
-  width: 845px;
-  margin: auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 50px 10px 10px 30px;
-  font-size: 1em;
+.showcase h2 {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--dark-1);
+}
+.showcase input {
+  font-size: 1.5rem;
+  box-sizing: content-box;
+  color: var(--dark-1);
+}
+input {
+  min-height: 40px;
+  font-size: 1.5rem;
+  transform-box: 2rem;
+}
+ .input-box {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  
+  background: var(--primary);
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 2rem;
+} 
+
+.input-box h4 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: var(--dark-1);
 }
 
-header>h1 {
-  background: linear-gradient(35deg, #ffcccc, #ccffff);
-  font-size: 08em;
-  margin-bottom: 2em;
-  margin-top: 0px;
-
-}
-input, button{
-  margin-left:30px;
-  transform: scale(1.5);
-  margin:3em 5em;
-}
-.add>button, .toggle>button, .change>button{
-  float:right;
-  margin-right: 100px;
-}
- 
-
-button {
-  border-radius: 5px;
-  color: rgb(136, 136, 138);
-  background-color:#ffcccc;
-  padding: 5px 10px 8px 10px;
+.input-box-add {box-sizing: border-box;
+  grid-area: input-box-add;
 }
 
-button:hover {
-  animation-name: background-color;
-  animation-duration: 500ms;
+.input-box-edit {
+  grid-area: input-box-edit;
 }
-@keyframes background-color {
-  100% {
-    background-color: #4791d0;
+
+.input-box-mark {
+  grid-area: input-box-mark;
+}
+
+.btn a:hover {
+  background: var(--dark-1);
+  color: var(--light);
+}
+
+/* todo list of items display*/
+.info {
+  background: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns:  repeat(2, 1fr);
+  padding: 3rem;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.info h3 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--dark);
+}
+.info ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns:  2fr;
+  font-size: 2rem;
+}
+
+.deleteBtn {
+  background: var(--dark);
+  color: var(--light);
+  margin: 20px;
+  padding: 0.6rem 1.3rem;
+  text-decoration:  none;
+  border: 0;
+  font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  .input {
+    grid-template-areas: 
+    "showcase"
+    "input-box-add"
+    "input-box-edit"
+    "input-box-mark";
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .showcase h2 {
+    font-size: 1.5rem;
+  }
+
+  .info ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
   }
 }
-.list{
-  font-size: 1.5em;
-  margin-left: 100px;
-  margin-top: 3em;
-}
-@media (min-height: 600px) {
-  input, section, button  {
-    margin: 20px 32px;
-  }
-}
 
-header {
-  grid-area: hd;
-}
-.footer {
-  grid-area: ft;
-}
-.content {
-  grid-area: main;
-}
-.sidebar {
-  grid-area: sd;
-}
+
