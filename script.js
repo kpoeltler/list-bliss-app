@@ -1,22 +1,25 @@
+
 let todoList = {
-  todos:[],
+  todos: [],
   displayTodos: function(){
-    console.log(`My Todos List:`);
-    for(let i = 0; i < this.todos.length; i++){
-      if (this.todos[i].completed === true){
-        console.log(`( x ), ${this.todos[i].todoText}`);
-      } else {
-        console.log(`(  ), ${this.todos[i].todoText}`);
+    if (this.todos.length === 0){
+      console.log('My list is empty!');
+    } else {
+      console.log('My Todos: ');
+      for (let i = 0; i < this.todos.length; i++) {
+        if (this.todos[i].completed === true){
+          console.log('( x ) ', this.todos[i].todoText);
+        } else {
+          console.log('( )', this.todos[i].todoText);
+        }
       }
-    } 
-    
+    }
   },
   addTodo: function(todoText){
-    this.todos.push({
+    this.todos.push( {
       todoText: todoText,
-      completed: false 
+      completed: false
     });
-    localStorage.setItem('myTodoList', JSON.stringify(todoList.todos));
     view.displayTodos();
   },
   changeTodo: function(position, todoText){
@@ -28,13 +31,12 @@ let todoList = {
     this.displayTodos();
   },
   toggleCompleted: function(position){
-    let todo = this.todos[position];
+    var todo = this.todos[position]; 
     todo.completed = !todo.completed;
     this.displayTodos();
   }
 };
-
-const handlers = {
+let handlers = {
   displayTodos: function(){
     todoList.displayTodos();
     view.displayTodos();
@@ -45,37 +47,42 @@ const handlers = {
     addTodoText.value = '';
     view.displayTodos();
   },
-  changeTodo: function(){
+  changeTodo: function() {
     let changeTodoPosition = document.getElementById('changeTodoPosition');
     let changeTodoText = document.getElementById('changeTodoText');
-    todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoText.value);
-    changeTodoText.value = '';
-    changeTodoPosition.value = '';
-    view.displayTodos()
+    todoList.changeTodo(changeTodoPosition.valueAsNumber,changeTodoText.value);
+    changeTodoPosition.value = ' ';
+    changeTodoText.value = ' ';
+    view.displayTodos();
+  },
+  deleteTodo: function(position){
+    todoList.deleteTodo(position);
+    view.displayTodos();
   },
   toggleCompleted: function() {
     let toggleTodoCompleted = document.getElementById('toggleTodoCompleted');
-    todoList.toggleCompleted(toggleTodoCompleted.valueAsNumber);
+    todoList.toggleCompleted(toggleTodoCompleted.value);
     view.displayTodos();
   }
 };
 
+//Renders todos to the screen
 const view = {
   displayTodos: function(){
-      let todoUl = document.querySelector('ul');
-      todoUl.innerHTML= "";
-      todoList.todos.forEach(function(todo, position){
-        let todoLi = document.createElement('li');
-        let todoComplete = '';
-        if(todo.completed === true){
-          todoComplete = '( x ) ' + todo.todoText;
-        } else {
-          todoComplete = '(  ) ' + todo.todoText;
-        }
+    var todosUl = document.querySelector('ul');
+    todosUl.innerHTML= '';
+    todoList.todos.forEach(function(todo, position){
+       var todoLi = document.createElement('li');
+       let todoComplete = '';
+      if (todo.completed === true){
+        todoComplete = '( x ) ' + todo.todoText;
+      } else {
+        todoComplete = '(  ) ' + todo.todoText;
+      }
       todoLi.id = position; 
       todoLi.textContent = todoComplete;
       todoLi.appendChild(this.createDeleteBtn());
-      todoUl.appendChild(todoLi);
+      todosUl.appendChild(todoLi);
     },this)
   },
   createDeleteBtn: function(){
@@ -87,21 +94,15 @@ const view = {
   setupEventListener: function(){
     let todosUl = document.querySelector('ul');
     todosUl.addEventListener('click', function(event){
-      
+    
     //Get the element that I clicked.
     var elementClicked = event.target;
 
     //Check if elementClicked is a delete button.
     if (elementClicked.className === 'deleteBtn'){
-      handlers.deleteTodos(parseInt(elementClicked.parentNode.id)); 
+      handlers.deleteTodo(parseInt(elementClicked.parentNode.id)); 
       }
     });
-    
-  },
-  
+  }
 };
 view.setupEventListener();
-
-
-
-
