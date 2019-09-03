@@ -90,8 +90,6 @@ input {
  .input-box {
   display: grid;
   grid-gap: 20px;
-  /* grid-template-columns: repeat(4, minmax(200px, 1fr)); */
-  
   background: var(--primary);
   align-items: center;
   justify-items: center;
